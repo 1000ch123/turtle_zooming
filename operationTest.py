@@ -2,14 +2,15 @@
 
 
 # easy sender
-def sendBytes(ser,ls):
+def sendBytes(serial,ls):
   for val in ls:
-    ser.write(chr(val))
+    serial.write(chr(val))
 
 if __name__ == "__main__":
   # initialize
   import serial
-  portPath = raw_input("please input port path")
+  portPath = "/dev" + raw_input("please input port path:/dev")
+  print "port path " + portPath
   ser = serial.Serial(portPath,57600)
   ser.open()
 
