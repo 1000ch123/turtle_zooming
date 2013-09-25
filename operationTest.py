@@ -13,11 +13,11 @@ if __name__ == "__main__":
   ser.open()
 
   # setup
-  sendBytes([128])
-  sendBytes([131])
+  sendBytes([128,131])
 
   # led
-  sendBytes([139,10,0,255])
+  sendBytes([139,8,0,255])
 
   # move
   sendBytes([137,0,100,128,0])
+  sendBytes([137,0,0,128,0])
