@@ -9,7 +9,7 @@ def sendBytes(ser,ls):
 if __name__ == "__main__":
   # initialize
   import serial
-  ser = serial.Serial("/dev/ttyUSB0",57600)
+  ser = serial.Serial("/dev/ttyUSB1",57600)
   ser.open()
 
   # setup
