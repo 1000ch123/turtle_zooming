@@ -6,7 +6,7 @@ def sendBytes(ls):
   for val in ls:
     ser.write(chr(val))
 
-if __name__ == "__main__"
+if __name__ == "__main__":
   # initialize
   import serial
   ser = serial.Serial("/dev/ttyUSB0",57600)
