@@ -2,7 +2,7 @@
 
 # initialize
 import serial
-ser = serial.Serial("/dev/ttfUSB0",57600)
+ser = serial.Serial("/dev/ttyUSB0",57600)
 ser.open()
 
 # setup
