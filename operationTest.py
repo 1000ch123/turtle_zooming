@@ -22,3 +22,6 @@ if __name__ == "__main__":
   sendBytes(ser,[137,0,100,128,0])
   sendBytes(ser,[156,1,44])
   sendBytes(ser,[137,0,0,128,0])
+
+  # close
+  ser.close()
