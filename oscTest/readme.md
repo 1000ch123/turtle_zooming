@@ -24,3 +24,12 @@ python client.py [--ip address] [--port portnum]
 
 基本的にはクライアントインスタンスを生成．  
 任意タイミングで適宜メッセージを作成，sendすればよい．
+
+### iosからosc受信するまで
+ipアドレスを毎回確認するのが面倒．
+```python
+import socket
+socket.gethostbyname(socket.gethostname())
+```
+らしい．  
+しかしこれで取得できるのはethernetIPみたい．
