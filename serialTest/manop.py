@@ -1,7 +1,7 @@
 # coding:UTF-8
 # initialize
 import serial
-path = "/dev/" + raw_input("please input path:/dev/")
+path = "/dev/" + input("please input path:/dev/")
 print("port:",path)
 ser = serial.Serial(path,57600)
 ser.open()
