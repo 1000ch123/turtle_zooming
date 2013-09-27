@@ -24,11 +24,18 @@ def forward():
   sendBytes([137,0,0,128,0])
   print("moveForward:30cm")
 
-def forwardFast():
+def fastForward():
   sendBytes([137,0,200,128,0])
   sendBytes([156,1,44])
   sendBytes([137,0,0,128,0])
-  print("moveForward:30cm")
+  print("moveForwardFast:30cm")
+
+def slowForward():
+  sendBytes([137,0,50,128,0])
+  sendBytes([156,1,44])
+  sendBytes([137,0,0,128,0])
+  print("moveForwardFast:30cm")
+
 
 
 def back():
