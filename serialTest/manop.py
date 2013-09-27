@@ -9,9 +9,10 @@ ser = serial.Serial(path,baudRate)
 
 def sendBytes(ls):
   for val in ls:
-    binary = st.pack("!L",val)
-    ser.write(binary)
+    #binary = st.pack("!L",val)
+    #ser.write(binary)
     #ser.write(chr(val).encode())
+    ser.write(str(val).encode())
 
 def init():
   sendBytes([128,131])
