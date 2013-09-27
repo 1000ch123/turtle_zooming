@@ -4,11 +4,11 @@ import serial
 path = "/dev/" + input("please input path:/dev/")
 print("port:",path)
 ser = serial.Serial(path,57600)
-ser.open()
+#ser.open()
 
 def sendBytes(ls):
   for val in ls:
-    ser.write(chr(val))
+    ser.write(chr(val).encode())
 
 def init():
   sendBytes([128,131])
@@ -23,3 +23,14 @@ def moveForward():
   sendBytes([156,1,44])
   sendBytes([137,0,0,128,0])
   print("moveForward:30cm")
+
+def moveBackward():
+  sendBytes([137,0,100,128,0])
+  sendBytes([156,1,44])
+  sendBytes([137,0,0,128,0])
+  print("moveForward:30cm")
+
+
+def close():
+  ser.close()
+  print("close connection")
