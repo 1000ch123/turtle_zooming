@@ -26,11 +26,23 @@ def moveForward():
   print("moveForward:30cm")
 
 def moveBackward():
-  sendBytes([137,255, 156,128,0])
+  sendBytes([137,255,156,128,0])
   sendBytes([156,1,44])
   sendBytes([137,0,0,128,0])
   print("moveBackward:30cm")
 
+def turnCCW(deg=360):
+  sendBytes([137,0,100,0,1])
+  sendBytes([157,1,105])
+  sendBytes([137,0,0,128,0])
+  print("rotate_CCW")
+
+def turnCW(deg=360):
+  sendBytes([137,0,100,255,255])
+  sendBytes([157,254,152])
+  sendBytes([137,0,0,128,0])
+  print("rotate_CW")
+ 
 
 def close():
   ser.close()

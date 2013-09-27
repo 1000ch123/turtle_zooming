@@ -47,3 +47,22 @@ rad:-2000 ~ 2000 [mm(?)]
 
 -1~-256:255,256 - abs(vel)  
 -257~-500:254,256 - abs(vel-255)
+
+* wait:155
+
+usage:[wait][time]
+
+time:0-255[15ms]
+
+* waitDistance:156
+
+usage:[waitDistance][distance_high][distane_low]
+
+distance: -32767 ~ 32768[mm]
+
+* waitAngle:157
+
+usage:[waitAngle][angle_high][angle_low]
+
+distance: -32767 ~ 32768[deg]
+angle: 
