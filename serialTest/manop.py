@@ -5,7 +5,6 @@ path = "/dev/" + input("please input path:/dev/")
 print("port:",path)
 baudRate = 57600
 ser = serial.Serial(path,baudRate)
-#ser.open()
 
 def sendBytes(ls):
   for val in ls:
@@ -25,6 +24,13 @@ def forward():
   sendBytes([137,0,0,128,0])
   print("moveForward:30cm")
 
+def forwardFast():
+  sendBytes([137,0,200,128,0])
+  sendBytes([156,1,44])
+  sendBytes([137,0,0,128,0])
+  print("moveForward:30cm")
+
+
 def back():
   sendBytes([137,255,156,128,0])
   sendBytes([156,254,212])
@@ -42,6 +48,9 @@ def turnCW(deg=360):
   sendBytes([157,254,152])
   sendBytes([137,0,0,128,0])
   print("rotate_CW")
+
+def connect():
+  ser = serial.Serial(path,baudRate)
 
 def close():
   ser.close()
