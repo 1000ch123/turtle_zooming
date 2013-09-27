@@ -18,41 +18,52 @@ def led1on():
   sendBytes([139,8,0,255])
   print("led on:send(139,8,0,255)")
 
-def forward():
+def go():
   sendBytes([137,0,100,128,0])
   sendBytes([156,1,44])
   sendBytes([137,0,0,128,0])
   print("moveForward:30cm")
 
-def fastForward():
+def goFast():
   sendBytes([137,0,200,128,0])
   sendBytes([156,1,44])
   sendBytes([137,0,0,128,0])
   print("moveForwardFast:30cm")
 
-def slowForward():
+def goSlow():
   sendBytes([137,0,50,128,0])
   sendBytes([156,1,44])
   sendBytes([137,0,0,128,0])
   print("moveForwardFast:30cm")
 
-
-
 def back():
-  sendBytes([137,255,156,128,0])
+  sendBytes([137,255,256-100,128,0])
   sendBytes([156,254,212])
   sendBytes([137,0,0,128,0])
   print("moveBackward:30cm")
 
-def turnCCW(deg=360):
+def backFast():
+  sendBytes([137,255,256-200,128,0])
+  sendBytes([156,254,212])
+  sendBytes([137,0,0,128,0])
+  print("moveBackward:30cm")
+
+def backSlow():
+  sendBytes([137,255,256-50,128,0])
+  sendBytes([156,254,212])
+  sendBytes([137,0,0,128,0])
+  print("moveBackward:30cm")
+
+
+def ccw(deg=360):
   sendBytes([137,0,100,0,1])
-  sendBytes([157,1,105])
+  sendBytes([157,0,90])
   sendBytes([137,0,0,128,0])
   print("rotate_CCW")
 
-def turnCW(deg=360):
+def cw(deg=360):
   sendBytes([137,0,100,255,255])
-  sendBytes([157,254,152])
+  sendBytes([157,255,165])
   sendBytes([137,0,0,128,0])
   print("rotate_CW")
 
