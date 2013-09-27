@@ -10,7 +10,7 @@ if __name__ == "__main__":
   # initialize
   import serial
   portPath = "/dev" + raw_input("please input port path:/dev")
-  print "port path " + portPath
+  print("port path " + portPath)
   ser = serial.Serial(portPath,57600)
   ser.open()
 
