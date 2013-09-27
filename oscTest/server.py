@@ -14,8 +14,8 @@ def print_compute_handler(args, volume):
     print("[{0}] ~ {1}".format(args[0], args[1](volume)))
   except ValueError: pass
 
-def print_lenseValue(args,argv):
-  print("here",args[0])
+def print_lenseValue(args,val,count):
+  print("here:",count,":",val)
 
 if __name__ == "__main__":
   # parse input args
