@@ -19,15 +19,15 @@ def led1on():
   sendBytes([139,8,0,255])
   print("led on:send(139,8,0,255)")
 
-def moveForward():
+def forward():
   sendBytes([137,0,100,128,0])
   sendBytes([156,1,44])
   sendBytes([137,0,0,128,0])
   print("moveForward:30cm")
 
-def moveBackward():
+def back():
   sendBytes([137,255,156,128,0])
-  sendBytes([156,1,44])
+  sendBytes([156,254,212])
   sendBytes([137,0,0,128,0])
   print("moveBackward:30cm")
 
@@ -42,7 +42,6 @@ def turnCW(deg=360):
   sendBytes([157,254,152])
   sendBytes([137,0,0,128,0])
   print("rotate_CW")
- 
 
 def close():
   ser.close()
