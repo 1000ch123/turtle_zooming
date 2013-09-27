@@ -1,6 +1,7 @@
 # coding:UTF-8
 # initialize
 import serial
+import strust as st
 path = "/dev/" + input("please input path:/dev/")
 print("port:",path)
 baudRate = 57600
@@ -8,7 +9,9 @@ ser = serial.Serial(path,baudRate)
 
 def sendBytes(ls):
   for val in ls:
-    ser.write(chr(val).encode())
+    binary = st.pack("!L",val)
+    ser.write(binary)
+    #ser.write(chr(val).encode())
 
 def init():
   sendBytes([128,131])
@@ -62,6 +65,7 @@ def ccw(deg=360):
   print("rotate_CCW")
 
 def cw(deg=360):
+  #“®‚«‚ª‚¨‚©‚µ‚¢D’¼i‚µ‚Ä‚é
   sendBytes([137,0,100,255,255])
   sendBytes([157,255,165])
   sendBytes([137,0,0,128,0])
