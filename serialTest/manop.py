@@ -1,7 +1,7 @@
 # coding:UTF-8
 # initialize
 import serial
-import strust as st
+import struct as st
 path = "/dev/" + input("please input path:/dev/")
 print("port:",path)
 baudRate = 57600
