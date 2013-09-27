@@ -3,7 +3,8 @@
 import serial
 path = "/dev/" + input("please input path:/dev/")
 print("port:",path)
-ser = serial.Serial(path,57600)
+baudRate = 57600
+ser = serial.Serial(path,baudRate)
 #ser.open()
 
 def sendBytes(ls):
@@ -25,7 +26,7 @@ def moveForward():
   print("moveForward:30cm")
 
 def moveBackward():
-  sendBytes([137,0,100,128,0])
+  sendBytes([137,255, 156,128,0])
   sendBytes([156,1,44])
   sendBytes([137,0,0,128,0])
   print("moveBackward:30cm")
