@@ -28,7 +28,7 @@ def moveBackward():
   sendBytes([137,0,100,128,0])
   sendBytes([156,1,44])
   sendBytes([137,0,0,128,0])
-  print("moveForward:30cm")
+  print("moveBackward:30cm")
 
 
 def close():

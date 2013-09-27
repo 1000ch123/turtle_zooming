@@ -4,7 +4,7 @@
 # easy sender
 def sendBytes(serial,ls):
   for val in ls:
-    serial.write(chr(val))
+    serial.write(chr(val).encode())
 
 if __name__ == "__main__":
   # initialize
@@ -12,7 +12,7 @@ if __name__ == "__main__":
   portPath = "/dev" + input("please input port path:/dev")
   print("port path " + portPath)
   ser = serial.Serial(portPath,57600)
-  ser.open()
+  #ser.open()
 
   # setup
   sendBytes(ser,[128,131])
