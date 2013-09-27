@@ -35,7 +35,7 @@ socket.gethostbyname(socket.gethostname())
 しかしこれで取得できるのはethernetIPみたい．
 
 ### turtlebotPCにiphoneから飛ばすまで
-turtlebot側(server)
+#####turtlebot側(server)
 ```
 # baffalo-G-BB64につなぎましょう
 cd masa/turtle_zooming/oscTest
@@ -43,7 +43,7 @@ pythonbrew use 3.3.1 #3.3.2が見つからないようなので.
 python server.py --ip 192.168.11.xx --port 12345
 ```
 
-iphone側(client)  
+##### iphone側(client)  
 **wifi:Baffalo-G-BB64につなぐ！**  
 まずXCodeで
 ```
@@ -52,9 +52,9 @@ _port = @"12345"
 ```
 基本的にこの状態でつながるはず．．なのだが．．
 
-* konashiが反応しない！
+* konashiが反応しない！  
 iPhoneとkonashiがつながってない．bluetooth周りのエラーのよう．
 対応策不明．一応本体電源切ってうんぬんすると治ったり治らなかったり．
 
-* ubuntuに値が飛んでない！
+* ubuntuに値が飛んでない！  
 wifi確認．Baffalo-g-bb64につながっているか？ipは正しいか？
