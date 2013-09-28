@@ -2,8 +2,8 @@
 # initialize
 import serial
 import struct as st
-path = "/dev/" + input("please input path:/dev/")
-print("port:",path)
+path = "/dev/" + raw_input("please input path:/dev/")
+print "port:",path
 baudRate = 57600
 ser = serial.Serial(path,baudRate)
 
