@@ -10,7 +10,7 @@ from pythonosc import dispatcher
 from pythonosc import osc_server
 
 #serial
-#import op 
+import op 
 
 # OSC
 def print_filter(args,val,count):
@@ -22,12 +22,15 @@ def print_lenseValue(args):
 def lense_left(args):
   print("lense_left")
   #todo:go_front
-  #op.go()
+  op.go()
   
 def lense_right(args):
   print("lense_right")
   #todo:_go_back
-  #op.back()
+  op.back()
+
+def finish_connect(args):
+  print("client disconnected. Bye.")
 
 if __name__ == "__main__":
   # parse input args
@@ -50,7 +53,8 @@ if __name__ == "__main__":
   dispatcher.map("/filter",print_filter,"arg1")
   dispatcher.map("/left" ,lense_left ,"L")
   dispatcher.map("/right",lense_right,"R")
-
+  dispatcher.map("/finish",finish_connect,"F")
+  
   # make server
   print("ip:",host," port",args.port)
   server = osc_server.ThreadingOSCUDPServer(
