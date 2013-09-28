@@ -49,7 +49,6 @@ def turnCW(deg=360):
   sendBytes([137,0,0,128,0])
   print("rotate_CW")
 
-
 # OSC
 def print_filter(args,val,count):
   print("here:",count,":",val)
@@ -58,12 +57,13 @@ def print_lenseValue(args):
   print("lense:",args[0])
 
 def lense_left(args):
-  print("turn_left")
+  print("lense_left")
   #todo:go_front
+  #wain‚Í‚³‚Ş‚©‚ç‘åä•v‚©H
   goFront()
 
 def lense_right(args):
-  print("turn_right")
+  print("lense_right")
   #todo:_go_back
   turnCCW()
 

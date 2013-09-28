@@ -58,7 +58,6 @@ def backSlow():
   sendBytes([137,0,0,128,0])
   print("moveBackward:30cm")
 
-
 def ccw(deg=360):
   sendBytes([137,0,100,0,1])
   sendBytes([157,0,90])
