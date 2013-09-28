@@ -33,6 +33,9 @@ def finish_connect(args):
   print("client disconnected. Bye.")
 
 if __name__ == "__main__":
+  #serial
+  op.init()
+  
   # parse input args
   parser = argparse.ArgumentParser()
   parser.add_argument("--ip",
