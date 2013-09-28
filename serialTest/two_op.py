@@ -12,7 +12,7 @@ def sendBytes(ls):
     #binary = st.pack("!L",val)
     #ser.write(binary)
     #ser.write(chr(val).encode())
-    tmp = str(val)
+    tmp = chr(val)
     print "send:",val," as:",tmp
     ser.write(tmp)
 
