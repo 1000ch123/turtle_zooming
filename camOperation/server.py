@@ -57,7 +57,6 @@ def move_cw(args):
   print("move_cw")
   op.cw()
 
-
 def finish_connect(args):
   print("client disconnected. Bye.")
 
