@@ -69,9 +69,9 @@ if __name__ == "__main__":
   dispatcher.map("/left" ,lense_left ,"L")
   dispatcher.map("/right",lense_right,"R")
   dispatcher.map("/finish",finish_connect,"F")
-  dispatcher.map("/vel_forward",vel_forward)
-  dispatcher.map("/vel_backward",vel_backward)
-  dispatcher.map("/vel_stop",vel_stop)
+  dispatcher.map("/vel_forward",vel_forward,"f")
+  dispatcher.map("/vel_backward",vel_backward,"b")
+  dispatcher.map("/vel_stop",vel_stop,"s")
 
   
   # make server
