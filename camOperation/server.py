@@ -83,11 +83,11 @@ if __name__ == "__main__":
   dispatcher.map("/debug", print)
   dispatcher.map("/filter",print_filter,"arg1")
   
-  velmode = True
+  #velmode = True
   #if velmode:
   #  print("velmode")
-  dispatcher.map("/vel_ccw" ,vel_ccw ,"L")
-  dispatcher.map("/vel_cw"  ,vel_cw,"R")
+  dispatcher.map("/vel_ccw",vel_ccw ,"L")
+  dispatcher.map("/vel_cw",vel_cw,"R")
   dispatcher.map("/vel_forward",vel_forward,"f")
   dispatcher.map("/vel_backward",vel_backward,"b")
   #else:
