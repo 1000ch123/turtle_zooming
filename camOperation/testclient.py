@@ -74,7 +74,7 @@ if __name__ == "__main__":
       """
       print(str)
     else:
-      print("wrong message.please input[l/r/q]")
+      print("wrong message.please look [h]elp")
       pass
     key = input("command?:[(h)elp]")
 

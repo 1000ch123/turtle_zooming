@@ -19,14 +19,13 @@ def print_filter(args,val,count):
 def print_lenseValue(args):
   print("lense:",args[0])
 
+#velmode_call
 def vel_ccw(args):
   print("vel_ccw")
-  #todo:go_front
   op.vel_ccw()
   
 def vel_cw(args):
   print("vel_cw")
-  #todo:_go_back
   op.vel_cw()
 
 def vel_forward(args):
@@ -40,6 +39,24 @@ def vel_backward(args):
 def vel_stop(args):
   print("vel_stop")
   op.stop()
+
+#movemode_call
+def move_go(args):
+  print("move_go")
+  op.go()
+
+def move_back(args):
+  print("move_back")
+  op.back()
+
+def move_ccw(args):
+  print("move_ccw")
+  op.ccw()
+
+def move_cw(args):
+  print("move_cw")
+  op.cw()
+
 
 def finish_connect(args):
   print("client disconnected. Bye.")
@@ -66,10 +83,19 @@ if __name__ == "__main__":
   dispatcher = dispatcher.Dispatcher()
   dispatcher.map("/debug", print)
   dispatcher.map("/filter",print_filter,"arg1")
-  dispatcher.map("/vel_ccw" ,vel_ccw ,"L")
-  dispatcher.map("/vel_cw"  ,vel_cw,"R")
-  dispatcher.map("/vel_forward",vel_forward,"f")
-  dispatcher.map("/vel_backward",vel_backward,"b")
+  
+  velmode =False 
+  if velmode:
+    dispatcher.map("/vel_ccw" ,vel_ccw ,"L")
+    dispatcher.map("/vel_cw"  ,vel_cw,"R")
+    dispatcher.map("/vel_forward",vel_forward,"f")
+    dispatcher.map("/vel_backward",vel_backward,"b")
+  else
+    dispatcher.map("/vel_ccw" ,move_go ,"L")
+    dispatcher.map("/vel_cw"  ,move_back,"R")
+    dispatcher.map("/vel_forward",move_ccw,"f")
+    dispatcher.map("/vel_backward",move_cw,"b")
+
   dispatcher.map("/vel_stop",vel_stop,"s")
   dispatcher.map("/finish",finish_connect,"q")
   
