@@ -46,7 +46,7 @@ def ccw():
   print("rotate_CCW")
 
 def cw():
-  vel = 255 -50
+  vel = 255 - 50
   deg = 255 - 50
   sendBytes([137,0,vel,255,255])
   sendBytes([157,255,deg])
