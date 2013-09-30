@@ -23,7 +23,7 @@ def led1on():
 # lenŽw’è
 def go():
   vel=50
-  length=30
+  length=10
   sendBytes([137,0,vel,128,0])
   sendBytes([156,0,length])
   sendBytes([137,0,0,128,0])
@@ -31,21 +31,25 @@ def go():
 
 def back():
   vel= 255 - 50
-  length= 255 - 30
+  length= 255 - 10
   sendBytes([137,255,vel,128,0])
   sendBytes([156,255,length])
   sendBytes([137,0,0,128,0])
   print("move_back:")
 
 def ccw():
-  sendBytes([137,0,100,0,1])
-  sendBytes([157,0,45])
+  vel = 50
+  deg = 30
+  sendBytes([137,0,vel,0,1])
+  sendBytes([157,0,deg])
   sendBytes([137,0,0,128,0])
   print("rotate_CCW")
 
 def cw():
-  sendBytes([137,0,100,255,255])
-  sendBytes([157,255,210])
+  vel = 255 -50
+  deg = 255 - 30
+  sendBytes([137,0,vel,255,255])
+  sendBytes([157,255,deg])
   sendBytes([137,0,0,128,0])
   print("rotate_CW")
 
