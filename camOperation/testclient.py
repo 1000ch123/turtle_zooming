@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
   client = udp_client.UDPClient(args.ip, args.port)
 
-  key = input("command?:") 
+  key = input("command?:[(h)elp]") 
   while True:
     if key == "l":
       print("send:/vel_ccw")
@@ -57,8 +57,24 @@ if __name__ == "__main__":
     elif key == "q":
       print("finish client")
       break
+    elif key == "h":
+      str = """
+      Command List
+      f :forward
+      b :back
+      s :stop
+
+      l :ccw
+      r :cw
+      
+      q :quit
+      h :help
+
+      each sleep time:0.1[sec]
+      """
+      print(str)
     else:
       print("wrong message.please input[l/r/q]")
       pass
-    key = input("command?:[l(eft)/r(ight)/q(uit)]")
+    key = input("command?:[(h)elp]")
 
