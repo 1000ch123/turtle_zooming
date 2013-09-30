@@ -29,31 +29,31 @@ if __name__ == "__main__":
       msg = osc_message_builder.OscMessageBuilder(address = "/vel_ccw")
       msg = msg.build()
       client.send(msg)
-      time.sleep(0.1)
+      time.sleep(1)
     elif key == "r":
       print("send:/vel_cw")
       msg = osc_message_builder.OscMessageBuilder(address = "/vel_cw")
       msg = msg.build()
       client.send(msg)
-      time.sleep(0.1) 
+      time.sleep(1) 
     elif key == "f":
       print("send:/vel_forward")
       msg = osc_message_builder.OscMessageBuilder(address = "/vel_forward")
       msg = msg.build()
       client.send(msg)
-      time.sleep(0.1) 
+      time.sleep(1) 
     elif key == "b":
       print("send:/vel_backward")
       msg = osc_message_builder.OscMessageBuilder(address = "/vel_backward")
       msg = msg.build()
       client.send(msg)
-      time.sleep(0.1) 
+      time.sleep(1) 
     elif key == "s":
       print("send:/vel_stop")
       msg = osc_message_builder.OscMessageBuilder(address = "/vel_stop")
       msg = msg.build()
       client.send(msg)
-      time.sleep(0.1) 
+      time.sleep(1) 
     elif key == "q":
       print("finish client")
       break

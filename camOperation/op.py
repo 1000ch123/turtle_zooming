@@ -46,20 +46,24 @@ def cw(vel=100,deg=45):
   print("rotate_CW")
 
 #velŽw’è
-def vel_forward(vel=100):
+def vel_forward():
+  vel = 100
   sendBytes([137,0,100,128,0])
   print("spd:",vel,"[mm/s]")
 
-def vel_backward(vel=100):
-  sendBytes([137,255,255-vel,128,0])
+def vel_backward():
+  vel = 100
+  sendBytes([137,255,155,128,0])
   print("spd:-",vel,"[mm/s]")
 
-def vel_ccw(vel=100):
-  sendBytes([137,0,vel,0,1])
+def vel_ccw():
+  vel = 100
+  sendBytes([137,0,100,0,1])
   print("spd:",vel,"[ccw]")
 
-def vel_cw(vel=100):
-  sendBytes([137,0,vel,255,255])
+def vel_cw():
+  vel =100
+  sendBytes([137,0,100,255,255])
   print("spd:",vel,"[cw]")
 
 def stop():
