@@ -90,7 +90,7 @@ if __name__ == "__main__":
     dispatcher.map("/vel_cw"  ,vel_cw,"R")
     dispatcher.map("/vel_forward",vel_forward,"f")
     dispatcher.map("/vel_backward",vel_backward,"b")
-  else
+  else:
     dispatcher.map("/vel_ccw" ,move_go ,"L")
     dispatcher.map("/vel_cw"  ,move_back,"R")
     dispatcher.map("/vel_forward",move_ccw,"f")
