@@ -33,7 +33,7 @@ def back():
   vel=200
   length=20
   sendBytes([137,255,255-vel,128,0])
-  sendBytes([156,255,255-len])
+  sendBytes([156,255,255-length])
   sendBytes([137,0,0,128,0])
   print("move_back:")
 
