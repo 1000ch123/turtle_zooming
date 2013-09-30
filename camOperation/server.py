@@ -19,15 +19,15 @@ def print_filter(args,val,count):
 def print_lenseValue(args):
   print("lense:",args[0])
 
-def lense_left(args):
-  print("lense_left")
+def vel_ccw(args):
+  print("vel_ccw")
   #todo:go_front
-  op.go()
+  op.vel_ccw()
   
-def lense_right(args):
-  print("lense_right")
+def vel_cw(args):
+  print("vel_cw")
   #todo:_go_back
-  op.back()
+  op.ve_cw()
 
 def vel_forward(args):
   print("vel_forward")
@@ -66,12 +66,12 @@ if __name__ == "__main__":
   dispatcher = dispatcher.Dispatcher()
   dispatcher.map("/debug", print)
   dispatcher.map("/filter",print_filter,"arg1")
-  dispatcher.map("/left" ,lense_left ,"L")
-  dispatcher.map("/right",lense_right,"R")
-  dispatcher.map("/finish",finish_connect,"F")
+  dispatcher.map("/vel_ccw" ,vel_ccw ,"L")
+  dispatcher.map("/vel_cw"  ,vel_cw,"R")
   dispatcher.map("/vel_forward",vel_forward,"f")
   dispatcher.map("/vel_backward",vel_backward,"b")
   dispatcher.map("/vel_stop",vel_stop,"s")
+  dispatcher.map("/finish",finish_connect,"F")
 
   
   # make server
