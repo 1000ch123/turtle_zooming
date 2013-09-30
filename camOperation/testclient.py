@@ -29,18 +29,18 @@ if __name__ == "__main__":
       msg = osc_message_builder.OscMessageBuilder(address = "/left")
       msg = msg.build()
       client.send(msg)
-      time.sleep(1)   
+      time.sleep(3)   
     elif key == "r":
       print("send:/right")
       msg = osc_message_builder.OscMessageBuilder(address = "/right")
       msg = msg.build()
       client.send(msg)
-      time.sleep(1) 
+      time.sleep(3) 
     elif key == "q":
       print("finish client")
       break
     else:
       print("wrong message.please input[l/r/q]")
       pass
-    key = input("command?:")
+    key = input("command?:[l(eft)/r(ight)/q(uit)]")
 

@@ -30,6 +30,18 @@ def back():
   sendBytes([137,0,0,128,0])
   print("moveBackward:30cm")
 
+def vel_forward():
+  sendBytes([137,0,100,128,0])
+  print("spd:100[mm/s]")
+
+def vel_backward():
+  sendBytes([137,255,156,128,0])
+  print("spd:-100[mm/s]")
+
+def stop():
+  sendBytes([[137,0,0,128,0]])
+  print("spd:stop")
+
 def ccw(deg=360):
   sendBytes([137,0,100,0,1])
   sendBytes([157,0,90])
