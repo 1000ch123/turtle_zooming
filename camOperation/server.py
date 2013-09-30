@@ -71,8 +71,7 @@ if __name__ == "__main__":
   dispatcher.map("/vel_forward",vel_forward,"f")
   dispatcher.map("/vel_backward",vel_backward,"b")
   dispatcher.map("/vel_stop",vel_stop,"s")
-  dispatcher.map("/finish",finish_connect,"F")
-
+  dispatcher.map("/finish",finish_connect,"q")
   
   # make server
   print("ip:",host," port",args.port)
