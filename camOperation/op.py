@@ -39,7 +39,7 @@ def vel_backward():
   print("spd:-100[mm/s]")
 
 def stop():
-  sendBytes([[137,0,0,128,0]])
+  sendBytes([137,0,0,128,0])
   print("spd:stop")
 
 def ccw(deg=360):
