@@ -29,6 +29,18 @@ def lense_right(args):
   #todo:_go_back
   op.back()
 
+def vel_forward(args):
+  print("vel_forward")
+  op.vel_forward()
+
+def vel_forward(args):
+  print("vel_forward")
+  op.vel_backward()
+
+def vel_stop(args):
+  print("vel_stop")
+  op.stop()
+
 def finish_connect(args):
   print("client disconnected. Bye.")
 
@@ -57,6 +69,10 @@ if __name__ == "__main__":
   dispatcher.map("/left" ,lense_left ,"L")
   dispatcher.map("/right",lense_right,"R")
   dispatcher.map("/finish",finish_connect,"F")
+  dispatcher.map("/vel_forward",vel_forward)
+  dispatcher.map("/vel_backward",vel_backward)
+  dispatcher.map("/vel_stop",vel_stop)
+
   
   # make server
   print("ip:",host," port",args.port)

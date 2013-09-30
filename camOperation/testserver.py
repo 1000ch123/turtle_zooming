@@ -29,6 +29,15 @@ def lense_right(args):
   #todo:_go_back
   #op.back()
 
+def vel_forward(args):
+  print("vel_forward")
+
+def vel_forward(args):
+  print("vel_forward")
+
+def vel_stop(args):
+  print("vel_stop")
+ 
 if __name__ == "__main__":
   # parse input args
   parser = argparse.ArgumentParser()
@@ -50,6 +59,9 @@ if __name__ == "__main__":
   dispatcher.map("/filter",print_filter,"arg1")
   dispatcher.map("/left" ,lense_left ,"L")
   dispatcher.map("/right",lense_right,"R")
+  dispatcher.map("/vel_forward",vel_forward)
+  dispatcher.map("/vel_backward",vel_backward)
+  dispatcher.map("/vel_stop",vel_stop)
 
   # make server
   print("ip:",host," port",args.port)
