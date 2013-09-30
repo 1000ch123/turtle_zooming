@@ -84,7 +84,7 @@ if __name__ == "__main__":
   dispatcher.map("/debug", print)
   dispatcher.map("/filter",print_filter,"arg1")
   
-  velmode =False 
+  velmode = True
   if velmode:
     dispatcher.map("/vel_ccw" ,vel_ccw ,"L")
     dispatcher.map("/vel_cw"  ,vel_cw,"R")
