@@ -38,11 +38,11 @@ def vel_backward():
   sendBytes([137,255,156,128,0])
   print("spd:-100[mm/s]")
 
-def vel_ccw()]:
+def vel_ccw():
   sendBytes([137,0,100,0,1])
   print("spd:ccw")
 
-def vel_cw()]:
+def vel_cw():
   sendBytes([137,0,100,255,255])
   print("spd:cw")
 
