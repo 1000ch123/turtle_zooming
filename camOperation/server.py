@@ -85,18 +85,18 @@ if __name__ == "__main__":
   dispatcher.map("/filter",print_filter,"arg1")
   
   velmode = True
-  if velmode:
-    print("velmode")
-    dispatcher.map("/vel_ccw" ,vel_ccw ,"L")
-    dispatcher.map("/vel_cw"  ,vel_cw,"R")
-    dispatcher.map("/vel_forward",vel_forward,"f")
-    dispatcher.map("/vel_backward",vel_backward,"b")
-  else:
-    print("movemode")
-    dispatcher.map("/vel_ccw" ,move_ccw ,"L")
-    dispatcher.map("/vel_cw"  ,move_cw,"R")
-    dispatcher.map("/vel_forward",move_go,"f")
-    dispatcher.map("/vel_backward",move_back,"b")
+  #if velmode:
+  #  print("velmode")
+  dispatcher.map("/vel_ccw" ,vel_ccw ,"L")
+  dispatcher.map("/vel_cw"  ,vel_cw,"R")
+  dispatcher.map("/vel_forward",vel_forward,"f")
+  dispatcher.map("/vel_backward",vel_backward,"b")
+  #else:
+  #  print("movemode")
+  #  dispatcher.map("/vel_ccw" ,move_ccw ,"L")
+  #  dispatcher.map("/vel_cw"  ,move_cw,"R")
+  #  dispatcher.map("/vel_forward",move_go,"f")
+  #  dispatcher.map("/vel_backward",move_back,"b")
 
   dispatcher.map("/vel_stop",vel_stop,"s")
   dispatcher.map("/finish",finish_connect,"q")
