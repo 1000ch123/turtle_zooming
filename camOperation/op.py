@@ -21,25 +21,25 @@ def led1on():
   print("led on:send(139,8,0,255)")
 
 # lenŽw’è
-def go(vel=100,length=10):
+def go(vel=100,length=50):
   sendBytes([137,0,vel,128,0])
   sendBytes([156,0,length])
   sendBytes([137,0,0,128,0])
   print("move_go:",length)
 
-def back(vel=100,length=10):
+def back(vel=100,length=50):
   sendBytes([137,255,255-vel,128,0])
   sendBytes([156,255,255 - length])
   sendBytes([137,0,0,128,0])
   print("move_back:",length)
 
-def ccw(vel=100,deg=10):
+def ccw(vel=100,deg=45):
   sendBytes([137,0,vel,0,1])
   sendBytes([157,0,deg])
   sendBytes([137,0,0,128,0])
   print("rotate_CCW")
 
-def cw(vel=100,deg=10):
+def cw(vel=100,deg=45):
   sendBytes([137,0,vel,255,255])
   sendBytes([157,255,255-deg])
   sendBytes([137,0,0,128,0])
@@ -47,7 +47,7 @@ def cw(vel=100,deg=10):
 
 #velŽw’è
 def vel_forward(vel=100):
-  sendBytes([137,0,vel,128,0])
+  sendBytes([137,0,100,128,0])
   print("spd:",vel,"[mm/s]")
 
 def vel_backward(vel=100):
