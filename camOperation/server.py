@@ -27,7 +27,7 @@ def vel_ccw(args):
 def vel_cw(args):
   print("vel_cw")
   #todo:_go_back
-  op.ve_cw()
+  op.vel_cw()
 
 def vel_forward(args):
   print("vel_forward")
