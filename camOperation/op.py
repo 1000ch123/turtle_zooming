@@ -22,14 +22,18 @@ def led1on():
 
 # lenŽw’è
 def go():
-  sendBytes([137,0,100,128,0])
-  sendBytes([156,0,50])
+  vel=200
+  length=20
+  sendBytes([137,0,vel,128,0])
+  sendBytes([156,0,length])
   sendBytes([137,0,0,128,0])
   print("move_go:")
 
 def back():
-  sendBytes([137,255,155,128,0])
-  sendBytes([156,255,205])
+  vel=200
+  length=20
+  sendBytes([137,255,255-vel,128,0])
+  sendBytes([156,255,255-len])
   sendBytes([137,0,0,128,0])
   print("move_back:")
 
