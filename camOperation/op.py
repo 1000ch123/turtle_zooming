@@ -23,7 +23,7 @@ def led1on():
 # lenŽw’è
 def go():
   vel=100
-  length=30
+  length=50
   sendBytes([137,0,vel,128,0])
   sendBytes([156,0,length])
   sendBytes([137,0,0,128,0])
@@ -31,7 +31,7 @@ def go():
 
 def back():
   vel= 255 - 100
-  length= 255 - 30
+  length= 255 - 50
   sendBytes([137,255,vel,128,0])
   sendBytes([156,255,length])
   sendBytes([137,0,0,128,0])
@@ -47,7 +47,7 @@ def ccw():
 
 def cw():
   vel = 255 -50
-  deg = 255 - 30
+  deg = 255 - 50
   sendBytes([137,0,vel,255,255])
   sendBytes([157,255,deg])
   sendBytes([137,0,0,128,0])
