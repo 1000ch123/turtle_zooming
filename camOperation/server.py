@@ -33,8 +33,8 @@ def vel_forward(args):
   print("vel_forward")
   op.vel_forward()
 
-def vel_forward(args):
-  print("vel_forward")
+def vel_backward(args):
+  print("vel_backward")
   op.vel_backward()
 
 def vel_stop(args):
